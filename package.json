@@ -4,7 +4,7 @@
   "description": "to monitor server",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "author": "Abu Sayed Polin",
   "license": "ISC",
