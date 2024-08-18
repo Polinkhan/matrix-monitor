@@ -1,0 +1,21 @@
+{
+  "name": "servermonitor",
+  "version": "1.0.0",
+  "description": "to monitor server",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Abu Sayed Polin",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.5",
+    "systeminformation": "^5.18.7"
+  }
+}
