@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import React from "react";
-import { CpuAndMemStatusScreenProps } from "../../common/types";
+import { MemStatusScreenProps } from "../../common/types";
 import { meterConvert } from "../../helper/functions";
 import LinearProgress from "../../components/LinearProgress";
 import { Color } from "../../Theme/Color";
 
-const MemoryStatusScreen = ({ data }: CpuAndMemStatusScreenProps) => {
+const MemoryStatusScreen = ({ data }: { data: MemStatusScreenProps }) => {
   const { total, available, swaptotal, swapfree } = data.mem;
 
   const memAvailable = (available / total) * 100;

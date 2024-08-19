@@ -1,11 +1,7 @@
 import React from "react";
 import { View, ViewStyle } from "react-native";
 import { Svg, Rect, Text as SVGText } from "react-native-svg";
-import Animated, {
-  useAnimatedProps,
-  useSharedValue,
-  withTiming,
-} from "react-native-reanimated";
+import Animated, { useAnimatedProps, useSharedValue, withTiming } from "react-native-reanimated";
 
 interface LinearProgressBarProps {
   width: number;
@@ -36,15 +32,7 @@ const LinearProgress = (props: LinearProgressBarProps) => {
     <View style={{ ...style }}>
       <Svg width={width} height={height}>
         {/* Background Rectangle */}
-        <Rect
-          x={0}
-          y={0}
-          width={width}
-          height={height}
-          fill="#f2f2f2"
-          rx={height / 2}
-          ry={height / 2}
-        />
+        <Rect x={0} y={0} width={width} height={height} fill="#f2f2f2" rx={height / 2} ry={height / 2} />
 
         {/* Progress Rectangle */}
         <AnimatedRect
@@ -61,10 +49,10 @@ const LinearProgress = (props: LinearProgressBarProps) => {
         {/* Text */}
         <SVGText
           fontSize={props.textSize ? props.textSize : "10"}
-          x={width / 2}
-          y={height / 2 + (props.textSize ? props.textSize / 2 - 1 : 5)}
+          x={30}
+          y={height / 2 + (props.textSize ? props.textSize / 2 - 1 : 4)}
           textAnchor="middle"
-          fill={props.textColor ? props.textColor : "#333333"}
+          fill={"#fff"}
         >
           {text}
         </SVGText>

@@ -2,35 +2,36 @@ import { SECURE_HOSTNAME, SECURE_IP, SECURE_PROTOCOL } from "./config";
 
 export type MethodType = "GET" | "POST" | "DELETE";
 
-export interface CpuAndMemStatusScreenProps {
-  data: {
-    cpu: {
-      brand: string;
-      cores: number;
-      manufacturer: string;
-      speed: number;
-      speedMin: number;
-      speedMax: number;
-    };
-    currentLoad: {
-      currentLoad: number;
-      cpus: Array<{ load: number }>;
-    };
-    cpuCurrentSpeed: {
-      cores: Array<number>;
-    };
-    cpuTemperature: {
-      main: number;
-    };
-    mem: {
-      total: number;
-      free: number;
-      used: number;
-      available: number;
-      swaptotal: number;
-      swapused: number;
-      swapfree: number;
-    };
+export interface CpuStatusScreenProps {
+  cpu: {
+    brand: string;
+    cores: number;
+    manufacturer: string;
+    speed: number;
+    speedMin: number;
+    speedMax: number;
+  };
+  currentLoad: {
+    currentLoad: number;
+    cpus: Array<{ load: number }>;
+  };
+  cpuCurrentSpeed: {
+    cores: Array<number>;
+  };
+  cpuTemperature: {
+    main: number;
+  };
+}
+
+export interface MemStatusScreenProps {
+  mem: {
+    total: number;
+    free: number;
+    used: number;
+    available: number;
+    swaptotal: number;
+    swapused: number;
+    swapfree: number;
   };
 }
 

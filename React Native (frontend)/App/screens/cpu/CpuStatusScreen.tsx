@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { CpuAndMemStatusScreenProps } from "../../common/types";
+import { CpuStatusScreenProps } from "../../common/types";
 import CircularProgress from "../../components/CircularProgress";
 import { Color } from "../../Theme/Color";
 
-const CpuStatusScreen = ({ data }: CpuAndMemStatusScreenProps) => {
-  const { brand, cores: coreCount, speed, speedMin, speedMax } = data.cpu;
+const CpuStatusScreen = ({ data }: { data: CpuStatusScreenProps }) => {
+  const { brand, cores: coreCount, speed } = data.cpu;
   const { main } = data.cpuTemperature;
   const { cores } = data.cpuCurrentSpeed;
   const { currentLoad, cpus } = data.currentLoad;
